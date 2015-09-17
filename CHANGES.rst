@@ -21,6 +21,8 @@ Changelog
 - Fixed the summary_view styling
   [sneridagh]
 - redirect_links property has moved to the configuration registry.
+- redirect_links, types_view_action_in_listings properies have moved to the
+  configuration registry.
   [esteele]
 
 
