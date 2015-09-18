@@ -95,7 +95,7 @@ class FolderView(BrowserView):
     @property
     def use_view_action(self):
         registry = getUtility(IRegistry)
-        return registry.get('plone.types_view_action_in_listings', [])
+        return registry.get('plone.types_use_view_action_in_listings', [])
 
     @property
     def show_about(self):

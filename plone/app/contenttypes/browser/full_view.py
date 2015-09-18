@@ -34,5 +34,5 @@ class FullViewItem(BrowserView):
         url = context.absolute_url()
         registry = getUtility(IRegistry)
         use_view_action = registry.get(
-            'plone.types_view_action_in_listings', [])
+            'plone.types_use_view_action_in_listings', [])
         return self.item_type in use_view_action and '%s/view' % url or url
