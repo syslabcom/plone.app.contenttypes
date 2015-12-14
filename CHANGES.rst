@@ -44,6 +44,9 @@ Fixes:
 
 Fixes:
 
+- Add fallback-views to redirect old at-scales to dx-scales (Fixes #304).
+  [pbauer]
+
 - fix issue in migration where source or target uuid could not
   be found
   [vangheem]

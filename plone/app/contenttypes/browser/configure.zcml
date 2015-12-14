@@ -263,5 +263,19 @@
     <browser:page name="all_content" template="templates/full_view.pt"/>
     <browser:page name="thumbnail_view" template="templates/listing_album.pt"/>
   </browser:pages>
+  <browser:pages
+      for="plone.app.contenttypes.interfaces.IImage"
+      class=".image.RedirectToScale"
+      layer="plone.app.contenttypes.interfaces.IPloneAppContenttypesLayer"
+      permission="zope2.View">
+    <browser:page name="image_icon"/>
+    <browser:page name="image_large"/>
+    <browser:page name="image_listing"/>
+    <browser:page name="image_mini"/>
+    <browser:page name="image_preview"/>
+    <browser:page name="image_thumb"/>
+    <browser:page name="image_tile"/>
+  </browser:pages>
+
 
 </configure>
