@@ -27,7 +27,7 @@ class LeadImageBehaviorFunctionalTest(unittest.TestCase):
         self.portal.portal_types._setObject('leadimagefolder', fti)
         fti.klass = 'plone.dexterity.content.Container'
         fti.behaviors = (
-            'plone.app.contenttypes.behaviors.leadimage.ILeadImage',
+            'plone.leadimage',
         )
         self.fti = fti
         alsoProvides(self.portal.REQUEST, IPloneAppContenttypesLayer)

@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.2.20 (unreleased)
--------------------
+1.3.0 (unreleased)
+------------------
 
 Breaking changes:
 
@@ -10,7 +10,8 @@ Breaking changes:
 
 New features:
 
-- *add item here*
+- Use behavior shortnames instead of dotted paths.
+  [jensens]
 
 Bug fixes:
 

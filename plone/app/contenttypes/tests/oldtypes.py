@@ -32,12 +32,12 @@ def create1_0EventType(portal):
     fti.klass = 'plone.app.contenttypes.tests.oldtypes.Event'
     fti.behaviors = (
         'plone.app.contenttypes.interfaces.IEvent',
-        'plone.app.dexterity.behaviors.metadata.IDublinCore',
-        'plone.app.content.interfaces.INameFromTitle',
-        'plone.app.dexterity.behaviors.discussion.IAllowDiscussion',
-        'plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation',
-        'plone.app.relationfield.behavior.IRelatedItems',
-        'plone.app.versioningbehavior.behaviors.IVersionable',
+        'plone.dublincore',
+        'plone.namefromtitle',
+        'plone.allowdiscussion',
+        'plone.excludefromnavigation',
+        'plone.relateditems',
+        'plone.versionable',
     )
     fti.schema = None
     fti.model_source = """

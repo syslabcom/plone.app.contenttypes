@@ -602,7 +602,7 @@ class ATCTMigratorHelpers(BrowserView):
         results['installed_with_behavior'] = []
         results['installed_without_behavior'] = []
         results['not_installed'] = []
-        behavior = 'plone.app.contenttypes.behaviors.leadimage.ILeadImage'
+        behavior = 'plone.leadimage'
         for type_name in DEFAULT_TYPES:
             fti = queryUtility(IDexterityFTI, name=type_name)
             if fti:

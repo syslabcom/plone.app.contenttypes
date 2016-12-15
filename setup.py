@@ -5,11 +5,12 @@ from setuptools import setup
 import os
 
 
-version = '1.2.20.dev0'
+version = '1.3.0.dev0'
 
 
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+
 
 long_description = \
     read('README.rst') + '\n\n' + \

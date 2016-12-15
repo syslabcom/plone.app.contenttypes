@@ -87,7 +87,7 @@ def enable_collection_behavior(context):
 def migrate_to_richtext(context):
     """Update fti's to add RichText behaviors and remove old text-fields."""
 
-    behavior = 'plone.app.contenttypes.behaviors.richtext.IRichText'
+    behavior = 'plone.richtext'
     types = [
         'Document',
         'News Item',
@@ -116,7 +116,7 @@ def migrate_album_view(context):
 def enable_shortname_behavior(context):
     """Add IShortName to all types."""
 
-    behavior = 'plone.app.dexterity.behaviors.id.IShortName'
+    behavior = 'plone.shortname'
     for type_id in DEFAULT_TYPES:
         fti = queryUtility(
             IDexterityFTI,

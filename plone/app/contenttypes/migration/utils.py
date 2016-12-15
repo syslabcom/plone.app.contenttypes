@@ -379,7 +379,7 @@ def link_items(  # noqa
 
     # if fieldname != 'relatedItems':
         # 'relatedItems' is the default field for AT and DX
-        # See plone.app.relationfield.behavior.IRelatedItems for DX and
+        # See plone.relateditems for DX and
         # Products.ATContentTypes.content.schemata.relatedItemsField for AT
         # They always use these relationships:
         # 'relatesTo' (Archetpyes) and 'relatedItems' (Dexterity)
