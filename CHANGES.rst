@@ -14,7 +14,8 @@ New features:
 
 Bug fixes:
 
-- *add item here*
+- Test replacing images
+  [pbauer]
 
 
 1.4.5 (2017-10-06)

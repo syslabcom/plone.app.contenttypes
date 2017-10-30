@@ -149,6 +149,29 @@ class ImageFunctionalTest(unittest.TestCase):
         self.assertIn('This is my image', self.browser.contents)
         self.assertIn('image.jpg', self.browser.contents)
 
+    def test_replace_image(self):
+        self.browser.open(self.portal_url)
+        self.browser.getLink('Image').click()
+        widget = 'form.widgets.title'
+        self.browser.getControl(name=widget).value = 'My image'
+        image_path = os.path.join(os.path.dirname(__file__), 'image.jpg')
+        image_ctl = self.browser.getControl(name='form.widgets.image')
+        image_ctl.add_file(io.FileIO(image_path), 'image/png', 'image.jpg')
+        self.browser.getControl('Save').click()
+        self.assertTrue(self.browser.url.endswith('image.jpg/view'))
+        self.assertIn('image.jpg', self.browser.contents)
+        image = self.portal['image.jpg']
+        old_image_data = image.image.data
+        self.browser.getLink('Edit').click()
+        self.browser.getControl(name='form.widgets.title').value = 'Foobar'
+        self.browser.getControl('Replace with new image').selected = True
+        image_path = os.path.join(os.path.dirname(__file__), 'image.png')
+        image_ctl = self.browser.getControl(name='form.widgets.image')
+        image_ctl.add_file(io.FileIO(image_path), 'image/png', 'image.png')
+        self.browser.getControl('Save').click()
+        self.assertTrue(self.browser.url.endswith('image.jpg/view'))
+        self.assertNotEqual(old_image_data, image.image.data)
+
     def test_add_image_with_shortname(self):
         self.browser.open(self.portal_url)
         self.browser.getLink('Image').click()
