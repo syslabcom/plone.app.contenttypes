@@ -8,6 +8,15 @@ Changelog
 
 .. towncrier release notes start
 
+2.0.2.slc1 (2019-03-13)
+-----------------------
+
+Bug fixes:
+
+
+- Detect whether a webdav request is RFC822 or pure payload and handle accordingly. (#2781)
+
+
 2.0.2 (2019-03-03)
 ------------------
 
